@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* added fonts */
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: local("Space Grotesk"), url(assets/fonts/static/SpaceGrotesk-Light.ttf) format("truetype");
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+    background: linear-gradient(0deg, rgba(0, 221, 168, 0.2), rgba(0, 221, 168, 0.2)), url(./assets/images/57.png);
+}
+
+.body, body {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.body{
+    background: linear-gradient(0deg, rgba(0, 221, 168, 0.2), rgba(0, 221, 168, 0.2)), url(assets/images/58.png);
+}
+
+
+.logo{
+    color: #1D2A65;
+}
+
+.L-containerHost{
+    top: 6rem !important;
+    bottom: 6rem !important;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+    height: calc(100vh - 12rem) !important;
+}
+
+.L-containerHost::-webkit-scrollbar{
+    display: none;
+}
+.circle{
+    border-radius: 50%;
+    background: #174AFF;
+    height: 20px; width: 20px;
+}
+
+.line{
+    background: #00D9AC;
+    height: 40px; width: 1px;
+}
+
+.dot{
+    width: 20px;
+}
+
+.topbar{
+    height: 6rem;
+}
+
+input{
+    outline: transparent !important;
+}

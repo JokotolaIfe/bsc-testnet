@@ -1,0 +1,186 @@
+const { guessProductionMode } = require("@ngneat/tailwind");
+
+process.env.TAILWIND_MODE = guessProductionMode() ? "build" : "watch";
+
+module.exports = {
+    prefix: "",
+    mode: "jit",
+    purge: {
+        content: ["./src/**/*.{html,ts,css,scss,sass,less,styl}"],
+    },
+    darkMode: "class", // or 'media' or 'class'
+    theme: {
+        screens: {
+            'tablet': { 'min': '350px', 'max': '767px' },
+            'sm': { 'min': '350px', 'max': '767px' },
+
+            // => @media (min-width: 350px) { ... }
+
+            'laptop': '1024px',
+            'lg': '1024px',
+
+            // => @media (min-width: 1024px) { ... }
+
+            'desktop': '1280px',
+            'xl': '1280px',
+
+            // => @media (min-width: 1280px) { ... }
+        },
+        colors: {
+            black: {
+                10: "#A0A5BA",
+                20: "#111315",
+                30: "#000000",
+                faint: "rgba(17, 19, 21, 0.6)",
+                faintest: "rgba(0, 0, 0, 0.28);",
+                bfaaint: "rgba(0, 14, 72, 0.62);",
+            },
+            deepBlue: {
+                10: "#1D2A65"
+            },
+            secondary: "#00D9AC",
+            primary: {
+                10: "#C5F3F",
+                20: "#0077FE",
+                30: "#174AFF",
+                faint: "#E8F2FF",
+            },
+            white: {
+                10: "#FBFDFF",
+                20: "#FFFFFF",
+                30: "#D9D9D9",
+                faint: "rgba(255, 255, 255, 0.4)"
+            },
+            grey: "#A0A5BA",
+            warning: "#FFCB67",
+            transparent: "transparent",
+            body_bg: "linear-gradient(0deg, rgba(0, 221, 168, 0.2), rgba(0, 221, 168, 0.2)), url(57.jpg);",
+        },
+        boxShadow: "drop-shadow(0px 7px 44px rgba(0, 0, 0, 0.14))",
+        height: {
+            vh5: "5vh",
+            vh10: "10vh",
+            vh20: "20vh",
+            vh30: "30vh",
+            vh40: "40vh",
+            vh50: "50vh",
+            vh60: "60vh",
+            vh70: "70vh",
+            vh80: "80vh",
+            vh90: "90vh",
+            full: "100%",
+            fit: "fit-content",
+            screen: "100vh",
+            14: "3.5rem",
+            24: "6rem"
+        },
+        border:{
+            transparent: "transparent",
+        },
+        width: {
+            0: "0px",
+            vw5: "5vw",
+            vw10: "10vw",
+            vw20: "20vw",
+            vw25: "25vw",
+            vw30: "30vw",
+            vw35: "35vw",
+            vw40: "40vw",
+            vw50: "50vw",
+            vw60: "60vw",
+            vw65: "60vw",
+            vw68: "68vw",
+            vw70: "70vw",
+            vw75: "75vw",
+            vw80: "80vw",
+            vw90: "90vw",
+
+            per2: "2%",
+            per3: "3%",
+            per5: "5%",
+            per10: "10%",
+            per15: "15%",
+            per20: "20%",
+            per25: "25%",
+            per23: "23%",
+            per30: "30%",
+            per35: "35%",
+            per40: "40%",
+            per45: "45%",
+            per50: "50%",
+            per55: "55%",
+            per60: "60%",
+            per65: "65%",
+            per70: "70%",
+            per75: "75%",
+            per78: "78%",
+            per80: "80%",
+            per85: "85%",
+            per90: "90%",
+            full: "100%",
+            width: "fit-content",
+            screen: "100vw",
+
+            em1: "1em",
+            em2: "2em",
+            em3: "3em",
+            em4: "4em",
+            em5: "5em",
+            em6: "6em",
+            em7: "7em",
+            em8: "8em",
+            em9: "9em",
+            em10: "10em",
+
+            rem1: "1rem",
+            rem2: "2rem",
+            rem3: "3rem",
+            rem4: "4rem",
+            rem5: "5rem",
+            rem6: "6rem",
+            rem7: "7rem",
+            rem8: "8rem",
+            rem9: "9rem",
+            rem10: "10rem",
+
+        },
+        maxHeight: {
+            per0: '0',
+            per25: '25%',
+            per50: '50%',
+            per60: '60%',
+            per75: '75%',
+            per80: '80%',
+            per90: '90%',
+            vh0: '0',
+            vh25: '25vh',
+            vh50: '50vh',
+            vh60: '60vh',
+            vh75: '75vh',
+            vh80: '80vh',
+            vh90: '90vh',
+            full: '100%',
+            vh100: '100vh',
+        },
+        minHeight: {
+            per0: '0',
+            per25: '25%',
+            per50: '50%',
+            per75: '75%',
+            vh0: '0',
+            vh25: '25vh',
+            vh50: '50vh',
+            vh60: '60vh',
+            vh75: '75vh',
+            vh80: '80vh',
+            vh90: '90vh',
+            full: '100%',
+            vh100: '100vh',
+        },
+        extend: {},
+    },
+    variants: {
+        extend: {},
+    },
+    plugins: [],
+};
